@@ -8,8 +8,10 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Button
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -47,6 +49,16 @@ fun LoginScreen()   {
         OutlinedTextField(value = "", onValueChange = {}, label = {
             Text(text = "Password")
         })
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Button(onClick = {}) {
+            Text(text = "Login")
+        }
+        Spacer(modifier = Modifier.height(32.dp))
+
+        TextButton(onClick = {}) {
+            Text(text = "Forgot Password")
+        }
     }
 
 }
