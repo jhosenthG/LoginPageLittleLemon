@@ -2,6 +2,7 @@ package com.example.loginpagelittlelemon
 
 import android.widget.Space
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -16,23 +17,27 @@ import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 
+@Preview(showBackground = true)
 @Composable
 fun LoginScreen()   {
     Column (
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().background(color = Color.White),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     )
     {
         Image(painter = painterResource
-            (id = R.drawable.littlelemon),
-            contentDescription ="Login Image", modifier = Modifier.size(280.dp) )
+            (id = R.drawable.littlelemonfile),
+            contentDescription ="Login Image", modifier = Modifier.size(350.dp) )
 
         Text(text = "Welcome Back", fontSize = 28.sp, fontWeight = FontWeight.Bold)
         
@@ -42,17 +47,17 @@ fun LoginScreen()   {
         Spacer(modifier = Modifier.height(16.dp))
 
         OutlinedTextField(value = "", onValueChange = {}, label = {
-            Text(text = "Email address")
+            Text(text = stringResource(id = R.string.Email_address))
         })
         Spacer(modifier = Modifier.height(8.dp))
 
         OutlinedTextField(value = "", onValueChange = {}, label = {
-            Text(text = "Password")
+            Text(text = stringResource(id = R.string.Password) )
         })
         Spacer(modifier = Modifier.height(16.dp))
 
         Button(onClick = {}) {
-            Text(text = "Login")
+            Text(text = stringResource(id = R.string.Login))
         }
         Spacer(modifier = Modifier.height(32.dp))
 
