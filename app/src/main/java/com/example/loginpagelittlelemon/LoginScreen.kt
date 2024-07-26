@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -56,8 +57,8 @@ fun LoginScreen()   {
         })
         Spacer(modifier = Modifier.height(16.dp))
 
-        Button(onClick = {}) {
-            Text(text = stringResource(id = R.string.Login))
+        FilledTonalButton(onClick = {}) {
+            Text(text = stringResource(id = R.string.Login), fontWeight = FontWeight.SemiBold)
         }
         Spacer(modifier = Modifier.height(32.dp))
 
